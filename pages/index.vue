@@ -3,7 +3,7 @@
         <div class="page-one">
             <div class="page-one-bg">
                 <div class="content">
-                    <div class="d-flex justify-content-between">
+                    <div class="d-block d-lg-flex justify-content-lg-between">
                         <div class="profile-introduct">
                             <hr />
                             <div class="introduct-hi font-weight-normal">Hi, I`am</div>
@@ -30,7 +30,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="profile-owner">
+                        <div class="profile-owner d-none d-sm-none d-lg-block">
                             <div class="profile-owner-border">
                                 <img src="~/assets/images/profile/owner.svg">
                             </div>
@@ -43,9 +43,23 @@
 </template>
 
 <style type="text/css">
-    .page-one{
-        height: 780px;
+    @media screen and (max-width: 1200px) {
+        .profile-introduct{
+            max-width: auto;
+            padding-top: 150px;
+        }
     }
+    @media screen and (min-width: 1200px) {
+        .page-one{
+            height: 780px;
+        }
+
+        .profile-introduct{
+            max-width: 40%;
+            margin-top: 15%;
+        }
+    }
+
     .page-one .page-one-bg{
         background-image: url('~/assets/images/shape/bg-1.svg');
         background-size: unset;
@@ -69,10 +83,6 @@
         cursor: pointer;
     }
 
-    .profile-introduct{
-        max-width: 40%;
-        margin-top: 15%;
-    }
     .profile-introduct hr{
         border-color: #000000;
         padding-bottom: 5px;
