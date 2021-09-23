@@ -42,24 +42,7 @@
         <div class="indonesia-mark"></div>
         <div class="page-two">
             <div class="content my-5">
-                <div class="project-title my-5">
-                    <hr>
-                    <div class="title-text">LAST PROJECT</div>
-                </div>
-                <div class="row py-4">
-                    <div class="col-6 project-preview">
-                        <div class="preview-dash"></div>
-                        <div class="preview-block"></div>
-                        <img class="preview-image" src="~/assets/images/shape/preview-01.png" />
-                    </div>
-                    <div class="col-6 px-5 project-info">
-                        <div class="project-name">Kinetic</div>
-                        <div class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</div>
-                    </div>
-                </div>
+                <HomeProject></HomeProject>
             </div>
         </div>
     </div>
@@ -76,56 +59,11 @@
         top: 500px;
         right: 0px;
     }
-    .project-title .title-text{
-        display: inline-block;
-        font-size: 27px;
-        font-weight: 500;
-    }
-    .project-title hr{
-        background: #000000;
-        display: inline-block;
-        width: 35px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-        border: 1px solid #000000;
-    }
-
-    .project-preview{
-        position: relative;
-        width: 550px;
-        height: 300px;
-    }
-    .project-preview .preview-dash{
-        position: absolute;
-        left: -20px;
-        top: -20px;
-        width: 550px;
-        height: 300px;
-        border-radius: 15px;
-        border: 2px solid #23cf9f;
-    }
-    .project-preview .preview-block{
-        background: #23cf9f;
-        position: absolute;
-        right: 30px;
-        bottom: -20px;
-        width: 250px;
-        height: 250px;
-        border-radius: 15px;
-        border: 2px solid #23cf9f;
-    }
-    .project-preview .preview-image{
-        position: absolute;
-        width: 550px;
-        height: 300px;
-        border-radius: 15px;
-        border: 2px solid #e9faf5;
-    }
 
     @media screen and (max-width: 1200px) {
         .profile-introduct{
             max-width: auto;
-            padding-top: 150px;
+            padding: 120px 0px;
         }
     }
     @media screen and (min-width: 1200px) {
