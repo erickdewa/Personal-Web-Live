@@ -46,13 +46,19 @@
                     <hr>
                     <div class="title-text">LAST PROJECT</div>
                 </div>
-                <div class="d-block d-lg-flex justify-content-lg-between">
-                    <div class="project-preview">
+                <div class="row py-4">
+                    <div class="col-6 project-preview">
                         <div class="preview-dash"></div>
                         <div class="preview-block"></div>
                         <img class="preview-image" src="~/assets/images/shape/preview-01.png" />
                     </div>
-                    <div>s</div>
+                    <div class="col-6 px-5 project-info">
+                        <div class="project-name">Kinetic</div>
+                        <div class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,7 +92,6 @@
 
     .project-preview{
         position: relative;
-        margin: 50px 20px;
         width: 550px;
         height: 300px;
     }
@@ -102,8 +107,8 @@
     .project-preview .preview-block{
         background: #23cf9f;
         position: absolute;
-        right: -15px;
-        bottom: -15px;
+        right: 30px;
+        bottom: -20px;
         width: 250px;
         height: 250px;
         border-radius: 15px;
