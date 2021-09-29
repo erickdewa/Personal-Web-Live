@@ -1,4 +1,4 @@
-## Tentang Projek
+## About Project
 
 Personal web digunakan sebagai penggambaran kemampuan seseorang individu mulai dari biodata, skill (soft skill dan hard skill), atau project yang pernah dikerjakan. Berikut page yang tersedia:
 
@@ -8,7 +8,7 @@ Personal web digunakan sebagai penggambaran kemampuan seseorang individu mulai d
 
 Jika ingin melihat preview lebih detail bisa melalui [erickdewa.com](https://erickdewa.com).
 
-## Menjalankan Projek
+## Run Project
 
 ```bash
 # install dependencies

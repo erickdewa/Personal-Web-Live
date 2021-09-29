@@ -45,6 +45,13 @@
                 <HomeProject></HomeProject>
             </div>
         </div>
+        <div style="position: relative; overflow: hidden;">
+            <div class="footer pt-5 pb-4" align="center">
+                <HomeFooter></HomeFooter>
+            </div>
+            <div class="footer-line"></div>
+        </div>
+
     </div>
 </template>
 
@@ -58,6 +65,23 @@
         position: absolute;
         top: 500px;
         right: 0px;
+    }
+
+    .footer{
+        background: #0d2c37;
+        color: #FFFFFF;
+        margin-top: 150px;
+    }
+    .footer-line{
+        background: #ffffff;
+        position: absolute;
+        bottom: 50px;
+        right: -10px;
+        width: 110%;
+        height: 120px;
+        transform: rotate(-5deg);
+        border-top: 2px solid #d7d7d7;
+        z-index: -1;
     }
 
     @media screen and (max-width: 1200px) {
@@ -164,6 +188,50 @@
     }
     .profile-owner:hover .profile-owner-border{
         border: 2px solid #f3f9ff;
+    }
+
+    /* Size Extra Small */
+    @media screen and (max-width: 600px) {
+        .profile-introduct{
+            max-width: auto;
+            padding: 120px 0px;
+        }
+    }
+    /* Size Small */
+    @media screen and (min-width: 600px) and (max-width: 960px) {
+        .profile-introduct{
+            max-width: auto;
+            padding: 120px 0px;
+        }
+    }
+    /* Size Medium */
+    @media screen and (min-width: 960px) and (max-width: 1264px) {
+        .profile-introduct{
+            max-width: auto;
+            padding: 120px 0px;
+        }
+    }
+    /* Size Lerge */
+    @media screen and (min-width: 1264px) and (max-width: 1904px) {
+        .page-one{
+            height: 640px;
+        }
+
+        .profile-introduct{
+            max-width: 40%;
+            margin-top: 15%;
+        }
+    }
+    /* Size Super Lerge */
+    @media screen and (min-width: 1904px) {
+        .page-one{
+            height: 640px;
+        }
+
+        .profile-introduct{
+            max-width: 40%;
+            margin-top: 15%;
+        }
     }
 </style>
 <script>

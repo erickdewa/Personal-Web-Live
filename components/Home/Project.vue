@@ -136,31 +136,73 @@
         }
     }
     /* Size Small */
-    @media screen and (max-width: 600px) and (max-width: 960px) {
-        .profile-introduct{
-            max-width: auto;
-            padding-top: 150px;
+    @media screen and (min-width: 600px) and (max-width: 960px) {
+        .project-preview{
+            display: flex;
+            justify-content: center;
+            height: auto;
+        }
+        .project-box-preview{
+            position: relative;
+            margin-top: 5px;
+            width: 400px;
+            height: 225px;
+        }
+        .project-preview .preview-dash{
+            left: 0px;
+            top: 0px;
+            width: 80%;
+            height: 80%;
+        }
+        .project-preview .preview-block{
+            right: 0px;
+            bottom: 0px;
+            width: 50%;
+            height: 50%;
+        }
+        .project-preview .preview-image{
+            margin: 2.5% 5%;
+            width: 90%;
+            height: 90%;
         }
     }
     /* Size Medium */
-    @media screen and (max-width: 960px) and (max-width: 1264px) {
-        .profile-introduct{
-            max-width: auto;
-            padding-top: 150px;
+    @media screen and (min-width: 960px) and (max-width: 1264px) {
+        .project-preview{
+            display: flex;
+            justify-content: center;
+            height: auto;
+        }
+        .project-box-preview{
+            position: relative;
+            margin-top: 5px;
+            width: 400px;
+            height: 225px;
+        }
+        .project-preview .preview-dash{
+            left: 0px;
+            top: 0px;
+            width: 90%;
+            height: 90%;
+        }
+        .project-preview .preview-block{
+            right: 0px;
+            bottom: 0px;
+            width: 50%;
+            height: 50%;
+        }
+        .project-preview .preview-image{
+            margin: 2.5% 5%;
+            width: 90%;
+            height: 90%;
         }
     }
     /* Size Lerge */
-    @media screen and (max-width: 1264px) and (max-width: 1904px) {
-        .profile-introduct{
-            max-width: auto;
-            padding-top: 150px;
-        }
+    @media screen and (min-width: 1264px) and (max-width: 1904px) {
+        
     }
     /* Size Super Lerge */
     @media screen and (min-width: 1904px) {
-        .profile-introduct{
-            max-width: auto;
-            padding-top: 150px;
-        }
+        
     }
 </style>
