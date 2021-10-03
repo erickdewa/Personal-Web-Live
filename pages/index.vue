@@ -45,6 +45,11 @@
                 <HomeProject></HomeProject>
             </div>
         </div>
+        <div class="page-three">
+            <div class="content my-5">
+                <HomeEducation></HomeEducation>
+            </div>
+        </div>
         <div style="position: relative; overflow: hidden;">
             <div class="footer pt-5 pb-4" align="center">
                 <HomeFooter></HomeFooter>
@@ -65,6 +70,25 @@
         position: absolute;
         top: 500px;
         right: 0px;
+    }
+
+    .page-title .title-text{
+        display: inline-block;
+        font-size: 27px;
+        font-weight: 500;
+    }
+    .page-title hr{
+        background: #000000;
+        display: inline-block;
+        width: 35px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        border: 1px solid #000000;
+    }
+
+    .page-three{
+        background: #f2f4f9;
+        margin: 150px 0px;
     }
 
     .footer{

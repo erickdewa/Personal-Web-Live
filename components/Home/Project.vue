@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="project-title my-4 my-sm-5">
+        <div class="page-title my-4 my-sm-5">
             <hr>
             <div class="title-text">LAST PROJECT</div>
         </div>
@@ -51,20 +51,6 @@
     .btn--custom:hover{
         background: #23cf9f;
         color: #ffffff;
-    }
-
-    .project-title .title-text{
-        display: inline-block;
-        font-size: 27px;
-        font-weight: 500;
-    }
-    .project-title hr{
-        background: #000000;
-        display: inline-block;
-        width: 35px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-        border: 1px solid #000000;
     }
 
     .project-preview{
