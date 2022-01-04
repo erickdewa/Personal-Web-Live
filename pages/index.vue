@@ -87,25 +87,16 @@
     }
 
     .page-three{
+        position: relative;
         background: #f2f4f9;
         margin: 150px 0px;
     }
 
     .footer{
         background: #0d2c37;
+        position: relative;
         color: #FFFFFF;
-        margin-top: 150px;
-    }
-    .footer-line{
-        background: #ffffff;
-        position: absolute;
-        bottom: 50px;
-        right: -10px;
-        width: 110%;
-        height: 120px;
-        transform: rotate(-5deg);
-        border-top: 2px solid #d7d7d7;
-        z-index: -1;
+        margin-top: 50px;
     }
 
     @media screen and (max-width: 1200px) {

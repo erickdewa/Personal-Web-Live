@@ -9,11 +9,17 @@
                 <div class="project-box-preview">
                     <div class="preview-dash"></div>
                     <div class="preview-block"></div>
-                    <img class="preview-image" src="~/assets/images/shape/preview-01.png" />
+                    <div class="preview-image">
+                        <img class="preview-image-img" @click="swap()" src="~/assets/images/shape/preview-01.png" width="100%" height="100%" />
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6 px-3 px-sm-5 mt-4 project-info">
-                <div class="project-name">Kinetic</div>
+                <div class="project-name-box">
+                    <div class="project-name swap">Kinetic</div>
+                    <div class="project-name aa">Avatar</div>
+                </div>
+
                 <div class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -38,6 +44,47 @@
 </template>
 
 <style type="text/css">
+    @keyframes preview-image-swap{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    @keyframes preview-dash-swap{
+        0%{
+            left: -20px;
+            top: -20px;
+        }
+        70%{
+            left: 20px;
+            top: 0px;
+        }
+        100%{
+            left: -20px;
+            top: -20px;
+        }
+    }
+    @keyframes preview-block-swap{
+        0%{
+            right: 30px;
+            bottom: -20px;
+        }
+        70%{
+            right: 60px;
+            bottom: 0px;
+        }
+        100%{
+            right: 30px;
+            bottom: -20px;
+        }
+    }
+
+    .project-name, .project-name.swap{
+        transition: opacity 1s linear;
+    }
+
     .btn--custom{
         background: #ffffff;
         color: #23cf9f;
@@ -58,11 +105,23 @@
         width: 550px;
         height: 300px;
     }
+    .project-preview.swap .preview-block{
+        animation-name: preview-block-swap;
+        animation-duration: 2s;
+    }
+    .project-preview.swap .preview-dash{
+        animation-name: preview-dash-swap;
+        animation-duration: 2s;
+    }
+    .project-preview.swap .preview-image-img{
+        animation-name: preview-image-swap;
+        animation-duration: 1.5s;   
+    }
     .project-preview .preview-dash{
         position: absolute;
         left: -20px;
         top: -20px;
-        width: 550px;
+        width: 540px;
         height: 300px;
         border-radius: 15px;
         border: 2px solid #23cf9f;
@@ -78,6 +137,8 @@
         border: 2px solid #23cf9f;
     }
     .project-preview .preview-image{
+        background: #e9faf5;
+        overflow: hidden;
         position: absolute;
         width: 550px;
         height: 300px;
@@ -85,9 +146,18 @@
         border: 2px solid #e9faf5;
     }
 
+    .project-name-box{
+        position: relative;
+        height: 50px;
+    }
     .project-info .project-name{
+        position: absolute;
+        opacity: 0;
         font-size: 25px;
         font-weight: 600;
+    }
+    .project-info .project-name.swap{
+        opacity: 1;
     }
 
     /* Size Extra Small */
@@ -192,3 +262,18 @@
         
     }
 </style>
+
+<script>
+    export default{
+        methods: {
+            swap(){
+                $('.project-name').removeClass('swap');
+                $('.project-name.aa').addClass('swap');
+                $('.project-preview').addClass('swap');
+                setTimeout(function(){
+                    $('.project-preview').removeClass('swap');
+                }, 2000);
+            }
+        }
+    }
+</script>

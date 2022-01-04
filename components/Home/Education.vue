@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div class="decore-edication"></div>
         <div class="d-flex py-5" align="center">
             <div class="education-ui-box">
                 <div class="page-title ml-5">
@@ -43,6 +44,17 @@
 </template>
 
 <style type="text/css" scoped="true">
+    .decore-edication{
+        background-image: url('~/assets/images/shape/shape-bg-1.png');
+        background-size: contain;
+        position: absolute;
+        top: -3%;
+        left: 0px;
+        width: 46%;
+        height: 106%;
+        opacity: 0.5;
+        border-radius: 0% 100% 100% 0%;
+    }
     .education-ui-box{
         display: flex;
         align-items: center;
