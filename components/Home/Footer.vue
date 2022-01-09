@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <div class="decore-footer decore-left"></div>
-        <div class="decore-footer decore-right"></div>
+    <div class="footer pt-5 pb-4" align="center">
+        <div class="footer-decore decore-left"></div>
+        <div class="footer-decore decore-right"></div>
         <div class="footer-social mb-3">
             <div class="social-circle">
                 <i class="fa fa-facebook"></i>
@@ -24,34 +24,6 @@
         </div>
     </div>
 </template>
-
-<style type="text/css" scoped="true">
-    .decore-footer{
-        background-image: url('~/assets/images/shape/shape-bg-footer.png');
-        background-size: cover;
-        position: absolute;
-        width: 120px;
-        height: 100%;
-        top: 0px;
-    }
-    .decore-footer.decore-left{
-        left: 0px;
-    }
-    .decore-footer.decore-right{
-        right: 0px;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-    }
-
-    .social-circle{
-        display: inline-block;
-        cursor: pointer;
-        font-size: 20px;
-    }
-    .social-circle:hover{
-        color: #23cf9f;
-    }
-</style>
 
 <script>
     export default{

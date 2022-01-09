@@ -1,13 +1,20 @@
 <template>
-    <div>
+    <div :class="(!skin) ? 'light-web' : 'dark-web'">
         <div class="page-one">
+            <div class="btn-to-dark" @click="(skin) ? skin = false : skin = true">
+                <i v-if="!skin" class="far fa-moon"></i>
+                <i v-else class="far fa-sun"></i>
+            </div>
             <div class="page-one-bg">
                 <div class="content">
                     <div class="d-block d-lg-flex justify-content-lg-between">
                         <div class="profile-introduct">
                             <hr />
                             <div class="introduct-hi font-weight-normal">Hi, I`am</div>
-                            <div class="introduct-name font-weight-bold">Erick Dewa Pranata</div>
+                            <div class="introduct-name font-weight-bold">
+                                <div class="owl"></div>
+                                <span>Erick Dewa Pranata</span>
+                            </div>
                             <div class="introduct-description font-weight-normal mt-3">Comes with all essential elements, features and sections for business websites, you need to launch a complete business or startup website.</div>
                             <div class="btn--introduct">
                                 <div class="btn-project px-4 py-2 mt-5">Let`s Go</div>
@@ -45,165 +52,22 @@
                 <HomeProject></HomeProject>
             </div>
         </div>
-        <div class="page-three">
+        <!-- <div class="page-three">
             <div class="content my-5">
                 <HomeEducation></HomeEducation>
             </div>
-        </div>
+        </div> -->
         <div style="position: relative; overflow: hidden;">
-            <div class="footer pt-5 pb-4" align="center">
-                <HomeFooter></HomeFooter>
-            </div>
-            <div class="footer-line"></div>
+            <HomeFooter></HomeFooter>
         </div>
 
     </div>
 </template>
 
 <style type="text/css">
-    .indonesia-mark{
-        background-image: url('~/assets/images/shape/indonesia.svg');
-        background-size: 500px 400px;
-        background-repeat: no-repeat;
-        width: 490px;
-        height: 400px;
-        position: absolute;
-        top: 500px;
-        right: 0px;
-    }
-
-    .page-title .title-text{
-        display: inline-block;
-        font-size: 27px;
-        font-weight: 500;
-    }
-    .page-title hr{
-        background: #000000;
-        display: inline-block;
-        width: 35px;
-        margin-bottom: 10px;
-        margin-right: 10px;
-        border: 1px solid #000000;
-    }
-
-    .page-three{
-        position: relative;
-        background: #f2f4f9;
-        margin: 150px 0px;
-    }
-
-    .footer{
-        background: #0d2c37;
-        position: relative;
-        color: #FFFFFF;
-        margin-top: 50px;
-    }
-
-    @media screen and (max-width: 1200px) {
-        .profile-introduct{
-            max-width: auto;
-            padding: 120px 0px;
-        }
-    }
-    @media screen and (min-width: 1200px) {
-        .page-one{
-            height: 760px;
-        }
-
-        .profile-introduct{
-            max-width: 40%;
-            margin-top: 15%;
-        }
-    }
-
-    .page-one .page-one-bg{
-        background-image: url('~/assets/images/shape/bg-1.svg');
-        background-size: unset;
-        background-repeat: no-repeat;
-    }
-    .content{
-        margin: 0% 10%;
-    }
-    .profile-share{
-        display: flex;
-    }
-    .profile-share .social-circle{
-        color: #000000;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 18px;
-        padding-top: 3px;
-        border: 2px solid #000000;
-        cursor: pointer;
-    }
-
-    .profile-introduct hr{
-        border-color: #000000;
-        padding-bottom: 5px;
-        margin-right: 8px;
-        vertical-align: middle;
-        display: inline-block;
-        width: 25px;
-    }
-    .profile-introduct .introduct-hi{
-        display: inline-block;
-        font-size: 20px;
-    }
-    .profile-introduct .introduct-name{
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .profile-introduct .introduct-description{
-        font-size: 20px;
-    }
-
-    .btn--introduct .btn-project{
-        background: #23cf9f;
-        border-color: #23cf9f;
-        color: #ffffff;
-        display: inline-block;
-        font-size: 15px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        border-radius: 15px;
-        box-shadow: -7px 44px 84px -12px rgba(35,207,159,0.44);
-        -webkit-box-shadow: -7px 44px 84px -12px rgba(35,207,159,0.44);
-        -moz-box-shadow: -7px 44px 84px -12px rgba(35,207,159,0.44);
-        cursor: pointer;
-    }
-
-    .profile-owner{
-        background: #ffffff;
-        display: inline-block;
-        margin-top: 15%;
-        border-radius: 50%;
-    }
-    .profile-owner .profile-owner-border{
-        background: #ffffff;
-        height: 400px;
-        width: 400px;
-        border-radius: 50%;
-        border: 2px solid #23cf9f;
-        transition: border 500ms;
-    }
-    .profile-owner img{
-        background: #f3f9ff;
-        border-radius: 50%;
-        margin: 4px;
-        height: 380px;
-        width: 380px;
-        transition: width 500ms, height 500ms, margin 500ms;
-    }
-    .profile-owner:hover img{
-        height: 100%;
-        width: 100%;
-        margin: 0px;
-    }
-    .profile-owner:hover .profile-owner-border{
-        border: 2px solid #f3f9ff;
-    }
+    @import url('~/assets/css/global.css');
+    @import url('~/assets/css/main.css');
+    @import url('~/assets/css/footer.css');
 
     /* Size Extra Small */
     @media screen and (max-width: 600px) {
@@ -257,7 +121,7 @@
         },
         data(){
             return {
-              // data
+                skin: false,
             }
         },
         methods: {

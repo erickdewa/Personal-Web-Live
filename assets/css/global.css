@@ -1,3 +1,21 @@
+:root{
+	--dark-bg: #1b2724;
+	--light-bg: #ffffff;
+}
+
 *{
 	font-family: 'Glory', sans-serif;
+}
+
+.text-default{
+	color: #23cf9f;
+}
+
+.dark-web{
+	background: var(--dark-bg);
+	color: #ffffff;
+}
+.light-web{
+	background: var(--light-bg);
+	color: #000000;
 }

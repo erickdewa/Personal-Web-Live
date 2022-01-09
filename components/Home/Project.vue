@@ -95,9 +95,15 @@
         border-radius: 25px;
         cursor: pointer;
     }
+    .dark-web .btn--custom{
+        background: transparent;
+    }
     .btn--custom:hover{
         background: #23cf9f;
         color: #ffffff;
+    }
+    .dark-web .btn--custom:hover{
+        color: #000000;
     }
 
     .project-preview{

@@ -1,0 +1,41 @@
+.dark-web .footer{
+    background: #19211f;
+    box-shadow: 0px 0px 17px 5px rgba(21,29,27,0.87);
+    -webkit-box-shadow: 0px 0px 17px 5px rgba(21,29,27,0.87);
+    -moz-box-shadow: 0px 0px 17px 5px rgba(21,29,27,0.87);
+}
+.light-web .footer{
+    background: #0d2c37;
+}
+
+.footer{
+    position: relative;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+.footer-decore{
+    background-image: url('~/assets/images/shape/shape-bg-footer.png');
+    background-size: cover;
+    position: absolute;
+    width: 120px;
+    height: 100%;
+    top: 0px;
+}
+.footer-decore.decore-left{
+    left: 0px;
+}
+.footer-decore.decore-right{
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.social-circle{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 20px;
+}
+.social-circle:hover{
+    color: #23cf9f;
+}
