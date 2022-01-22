@@ -10,20 +10,17 @@
                     <div class="preview-dash"></div>
                     <div class="preview-block"></div>
                     <div class="preview-image">
-                        <img class="preview-image-img" @click="swap()" src="~/assets/images/shape/preview-01.png" width="100%" height="100%" />
+                        <img class="preview-image-img" title="Click To Change" @click="swap()" :src="require(`~/assets/images/shape/${ dataProject[mainProject].img }`)" width="100%" height="100%" />
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6 px-3 px-sm-5 mt-4 project-info">
                 <div class="project-name-box">
-                    <div class="project-name swap">Kinetic</div>
-                    <div class="project-name aa">Avatar</div>
+                    <div class="project-name prev swap">{{ dataProject[mainProject].title }}</div>
+                    <div class="project-name next">{{ dataProject[((mainProject+1) > (dataProject.length-1)) ? 0 : mainProject+1].title }}</div>
                 </div>
 
-                <div class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</div>
+                <div class="project-desc">{{ dataProject[mainProject].description }}</div>
                 <div class="project-btn mt-3">
                     <div class="btn--custom px-3">
                         <span>Visit</span>
@@ -271,14 +268,46 @@
 
 <script>
     export default{
+        data(){
+            return {
+                mainProject: 0,
+
+                dataProject: [
+                    {
+                        img: 'preview-01.png',
+                        title: 'Kinetic',
+                        description: 'Kinetic lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+                    },
+                    {
+                        img: 'preview-02.png',
+                        title: 'Avatar',
+                        description: 'Avatar lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+                    },
+                ],
+            }
+        },
         methods: {
             swap(){
-                $('.project-name').removeClass('swap');
-                $('.project-name.aa').addClass('swap');
+                var vm = this;
+                
+                var prev = $('.project-name.prev');
+                var next = $('.project-name.next');
+                var indexNext = ((vm.mainProject+1) > (vm.dataProject.length-1)) ? 0 : vm.mainProject+1;
+
+                prev.removeClass('swap');
+                next.addClass('swap');
                 $('.project-preview').addClass('swap');
                 setTimeout(function(){
-                    $('.project-preview').removeClass('swap');
-                }, 2000);
+                    vm.mainProject = indexNext;
+                    prev.text(vm.dataProject[vm.mainProject].title);
+                    $('.project-desc').text(vm.dataProject[vm.mainProject].description);
+                    setTimeout(function(){
+                        next.removeClass('swap');
+                        prev.addClass('swap');
+                        $('.project-preview').removeClass('swap');
+                    }, 1000);
+                }, 1000)
+                next.text(vm.dataProject[((indexNext+1) > (vm.dataProject.length-1)) ? 0 : indexNext+1].title);
             }
         }
     }

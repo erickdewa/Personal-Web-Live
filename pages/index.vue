@@ -61,6 +61,9 @@
             <HomeFooter></HomeFooter>
         </div>
 
+        <div class="to-top">
+            <i class="fa fa-arrow-circle-o-up"></i>
+        </div>
     </div>
 </template>
 
@@ -68,6 +71,16 @@
     @import url('~/assets/css/global.css');
     @import url('~/assets/css/main.css');
     @import url('~/assets/css/footer.css');
+
+    .to-top{
+        color: #23cf9f;
+        font-size: 40px;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 100px;
+        cursor: pointer;
+    }
 
     /* Size Extra Small */
     @media screen and (max-width: 600px) {
@@ -128,7 +141,9 @@
           // method
         },
         mounted(){
-            var vm = this;
+            $(".to-top").click(function() {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            });
         },
     }
 </script>

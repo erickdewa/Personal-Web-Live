@@ -6,6 +6,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    mode: 'universal',
+    target: 'static',
+
     title: 'Erick Dewa Pranata',
     htmlAttrs: {
       lang: 'id'
