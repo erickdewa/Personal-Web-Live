@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="talk-project my-5 py-2 py-md-5">
+        <div v-if="$route.name != null" class="talk-project my-5 py-2 py-md-5">
             <div class="title-talk">Let`s talk about a project</div>
             <div align="center">
                 <div class="desc-talk mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -41,11 +41,8 @@
     export default{
         data(){
             return {
-                year: "",
+                year: new Date().getFullYear(),
             }
         },
-        mounted(){
-            this.year = new Date().getFullYear();
-        }
     }
 </script>
