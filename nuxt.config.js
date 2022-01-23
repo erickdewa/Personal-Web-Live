@@ -24,9 +24,11 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Glory:wght@100;200;300;400;500;600;700;800&display=swap' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/monokai-sublime.min.css' },
     ],
     script: [
       { src: 'https://kit.fontawesome.com/3909195b76.js', crossorigin: 'anonymous' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js' },
       { src: 'https://code.jquery.com/jquery-3.6.0.min.js', integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=", crossorigin: 'anonymous' },
     ]
   },

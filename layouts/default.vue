@@ -13,6 +13,7 @@
 </template>
 
 <style type="text/css">
+    @import url('~/assets/css/blog.css');
     @import url('~/assets/css/global.css');
     @import url('~/assets/css/main.css');
     @import url('~/assets/css/footer.css');
