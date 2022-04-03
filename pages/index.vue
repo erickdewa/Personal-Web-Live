@@ -52,11 +52,11 @@
                 <HomeProject></HomeProject>
             </div>
         </div>
-        <!-- <div class="page-three">
+        <div class="page-three d-none d-xl-block">
             <div class="content my-5">
                 <HomeEducation></HomeEducation>
             </div>
-        </div> -->
+        </div>
     </div>
 </template>
 

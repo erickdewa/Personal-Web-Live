@@ -4,7 +4,7 @@
         <div class="d-flex py-5" align="center">
             <div class="education-ui-box">
                 <div class="page-title ml-5">
-                    <div class="title-text" style="font-size: 40px;">My Education</div>
+                    <div class="title-text">My Education</div>
                 </div>
                 <div class="education-ui-circle"></div>
                 <div class="education-ui-dot top d-block"></div>
@@ -63,6 +63,13 @@
         height: 615px;
         overflow: hidden;
     }
+    .education-ui-box .title-text{
+        font-size: 60px;
+        font-weight: bolder;
+        -webkit-text-stroke: 2px #212529;
+        font-family: sans;
+        color: #1b272412;
+    }
     .education-ui-box .education-ui-circle{
         position: absolute;
         right: 0px;
@@ -70,11 +77,11 @@
         height: 800px;
         width: 800px;
         border-radius: 50%;
-        border: 2px solid #e4e7ee;
+        border: 2px solid #23cf9f;
         z-index: 1;
     }
     .education-ui-box .education-ui-dot{
-        background: #e4e7ee;
+        background: #23cf9f;
         position: absolute;
         width: 13px;
         height: 13px;
@@ -105,7 +112,7 @@
         border-radius: 5px;
     }
     .education-box .education-box-dot{
-        background: #e4e7ee;
+        background: #23cf9f;
         top: 43%;
         left: -7.5px;
         position: absolute;
@@ -118,11 +125,11 @@
         top: 50%;
         position: absolute;
         display: inline-block;
-        border-bottom: 2px solid #e4e7ee;
+        border-bottom: 2px solid #23cf9f;
         border-radius: 50%;
     }
     .education-box .education-tipe{
-        color: red;
+        color: #23cf9f;
         font-size: 13px;
         font-weight: 600;
     }

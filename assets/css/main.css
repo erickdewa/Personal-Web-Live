@@ -61,6 +61,9 @@
     position: relative;
     background: #f2f4f9;
     margin: 150px 0px;
+    webkit-box-shadow: 0px 0px 50px 80px rgb(242 244 249);
+    -moz-box-shadow: 0px 0px 50px 80px rgb(242 244 249 1);
+    box-shadow: 0px 0px 50px 80px rgb(242 244 249);
 }
 
 @media screen and (max-width: 1200px) {

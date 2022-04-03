@@ -29,7 +29,7 @@ export default {
     script: [
       { src: 'https://kit.fontawesome.com/3909195b76.js', crossorigin: 'anonymous' },
       { src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js' },
-      { src: 'https://code.jquery.com/jquery-3.6.0.min.js', integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=", crossorigin: 'anonymous' },
+      { src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' },
     ]
   },
 
