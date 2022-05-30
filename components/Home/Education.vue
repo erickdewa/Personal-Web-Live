@@ -3,8 +3,9 @@
         <div class="decore-edication"></div>
         <div class="d-flex py-5" align="center">
             <div class="education-ui-box">
-                <div class="page-title ml-5">
+                <div class="page-title ml-5 position-relative">
                     <div class="title-text">My Education</div>
+                    <svg style="position: absolute; right: -10px; bottom: -5px; width: 200px; transform: rotate(3deg);" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 416.04 71.16"><path d="M788.6,61.29l-83.81.14c-26.91,0-53.72.33-80.5,3.34S571.1,72,544.64,76.33c-25.31,4.15-50.55,8.85-75.51,14.81a572.41,572.41,0,0,0-83.8,26.45c-3.73,1.52-6.42,5-5.24,9.22,1,3.55,5.44,6.79,9.23,5.24,47.8-19.53,98.34-30.9,149.12-39.55,25.62-4.37,51.35-8.45,77.15-11.69,26.7-3.35,53.38-4.3,80.28-4.36q46.36-.12,92.73-.16C798.25,76.27,798.27,61.27,788.6,61.29Z" transform="translate(-379.81 -61.29)" style="fill:#50b792"/></svg>
                 </div>
                 <div class="education-ui-circle"></div>
                 <div class="education-ui-dot top d-block"></div>
@@ -66,9 +67,7 @@
     .education-ui-box .title-text{
         font-size: 60px;
         font-weight: bolder;
-        -webkit-text-stroke: 2px #212529;
-        font-family: sans;
-        color: #1b272412;
+        color: #000000;
     }
     .education-ui-box .education-ui-circle{
         position: absolute;
