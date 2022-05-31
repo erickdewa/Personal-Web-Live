@@ -19,3 +19,6 @@
 	background: var(--light-bg);
 	color: #000000;
 }
+.cursor-pointer{
+	cursor: pointer;
+}
