@@ -1,6 +1,7 @@
 <template>
     <div>
         <div v-if="$route.name != null" class="talk-project my-5 py-2 py-md-5">
+            <div class="arrow-hire"></div>
             <div class="title-talk">Let`s talk about a project</div>
             <div align="center">
                 <div class="desc-talk mx-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -8,7 +9,7 @@
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</div>
             </div>
-            <div class="hire-talk mt-4">Hire Me</div>
+            <a class="hire-talk mt-4" :href="hireLink" target="_blank">Hire Me</a>
         </div>
         <div class="footer pt-5 pb-4" align="center">
             <div class="footer-decore decore-left"></div>
@@ -42,6 +43,7 @@
         data(){
             return {
                 year: new Date().getFullYear(),
+                hireLink: 'https://www.upwork.com/freelancers/~01637f1d502188ca61/'
             }
         },
     }

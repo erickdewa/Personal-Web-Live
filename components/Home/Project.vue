@@ -10,19 +10,18 @@
                     <div class="preview-dash"></div>
                     <div class="preview-block"></div>
                     <div class="preview-image">
-                        <img class="preview-image-img" title="Click To Change" @click="swap()" :src="require(`~/assets/images/shape/${ dataProject[mainProject].img }`)" width="100%" height="100%" />
+                        <img class="preview-image-img" title="Click To Change" @click="swap()" :src="require(`~/assets/images/project/${ dataProject[mainProject].img }`)" width="100%" height="100%" />
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6 px-3 px-sm-5 mt-4 project-info">
                 <div class="project-name-box">
-                    <div class="project-name prev swap">{{ dataProject[mainProject].title }}</div>
-                    <div class="project-name next">{{ dataProject[((mainProject+1) > (dataProject.length-1)) ? 0 : mainProject+1].title }}</div>
+                    <div v-for="(dataProjects, x) in dataProject" :class="`project-name id-${ x } swap`">{{ dataProject[mainProject].title }}</div>
                 </div>
 
                 <div class="project-desc">{{ dataProject[mainProject].description }}</div>
                 <div class="project-btn mt-3">
-                    <div class="btn--custom px-3">
+                    <div class="btn--custom px-3" @click="$router.push(dataProject[mainProject].link)">
                         <span>Visit</span>
                     </div>
                     <div class="btn--custom px-2 ml-1">
@@ -77,9 +76,47 @@
             bottom: -20px;
         }
     }
+    @keyframes preview-dash-swap-xs{
+        0%{
+            left: 0px;
+            top: 0px;
+        }
+        70%{
+            left: 20px;
+            top: 10px;
+        }
+        100%{
+            left: 0px;
+            top: 0px;
+        }
+    }
+    @keyframes preview-block-swap-xs{
+        0%{
+            right: 0px;
+            bottom: 0px;
+        }
+        70%{
+            right: 20px;
+            bottom: 15px;
+        }
+        100%{
+            right: 0px;
+            bottom: 0px;
+        }
+    }
 
+    .project-name, .project-name{
+        transition: opacity 1s ease-in-out;
+    }
     .project-name, .project-name.swap{
-        transition: opacity 1s linear;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .project-desc, .project-desc{
+        transition: opacity 1s ease-in-out;
+    }
+    .project-desc, .project-desc.swap{
+        transition: opacity 1s ease-in-out;
     }
 
     .btn--custom{
@@ -89,6 +126,7 @@
         display: inline-block;
         padding: 2px 0px;
         border: 2px solid #23cf9f;
+        text-decoration: none!important;
         border-radius: 25px;
         cursor: pointer;
     }
@@ -108,6 +146,10 @@
         width: 550px;
         height: 300px;
     }
+    .project-preview.swap .preview-image-img{
+        animation-name: preview-image-swap;
+        animation-duration: 1.5s;   
+    }
     .project-preview.swap .preview-block{
         animation-name: preview-block-swap;
         animation-duration: 2s;
@@ -115,10 +157,6 @@
     .project-preview.swap .preview-dash{
         animation-name: preview-dash-swap;
         animation-duration: 2s;
-    }
-    .project-preview.swap .preview-image-img{
-        animation-name: preview-image-swap;
-        animation-duration: 1.5s;   
     }
     .project-preview .preview-dash{
         position: absolute;
@@ -193,6 +231,14 @@
             width: 90%;
             height: 90%;
         }
+        .project-preview.swap .preview-block{
+            animation-name: preview-block-swap-xs;
+            animation-duration: 2s;
+        }
+        .project-preview.swap .preview-dash{
+            animation-name: preview-dash-swap-xs;
+            animation-duration: 2s;
+        }
     }
     /* Size Small */
     @media screen and (min-width: 600px) and (max-width: 960px) {
@@ -223,6 +269,14 @@
             margin: 2.5% 5%;
             width: 90%;
             height: 90%;
+        }
+        .project-preview.swap .preview-block{
+            animation-name: preview-block-swap-xs;
+            animation-duration: 2s;
+        }
+        .project-preview.swap .preview-dash{
+            animation-name: preview-dash-swap-xs;
+            animation-duration: 2s;
         }
     }
     /* Size Medium */
@@ -255,14 +309,22 @@
             width: 90%;
             height: 90%;
         }
+        .project-preview.swap .preview-block{
+            animation-name: preview-block-swap-xs;
+            animation-duration: 2s;
+        }
+        .project-preview.swap .preview-dash{
+            animation-name: preview-dash-swap-xs;
+            animation-duration: 2s;
+        }
     }
     /* Size Lerge */
     @media screen and (min-width: 1264px) and (max-width: 1904px) {
-        
+
     }
     /* Size Super Lerge */
     @media screen and (min-width: 1904px) {
-        
+
     }
 </style>
 
@@ -274,14 +336,22 @@
 
                 dataProject: [
                     {
-                        img: 'preview-01.png',
+                        img: 'kinetic.png',
                         title: 'Kinetic',
+                        link: 'https://erickdewa.com',
                         description: 'Kinetic lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
                     },
                     {
-                        img: 'preview-02.png',
-                        title: 'Avatar',
-                        description: 'Avatar lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+                        img: 'espj-biroumum.png',
+                        title: 'ESPJ Biro Umum',
+                        link: '#',
+                        description: 'ESPJ Biro Umum lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
+                    },
+                    {
+                        img: 'verimer.png',
+                        title: 'Verimer',
+                        link: '#',
+                        description: 'Verimer lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
                     },
                 ],
             }
@@ -290,24 +360,16 @@
             swap(){
                 var vm = this;
                 
-                var prev = $('.project-name.prev');
-                var next = $('.project-name.next');
                 var indexNext = ((vm.mainProject+1) > (vm.dataProject.length-1)) ? 0 : vm.mainProject+1;
-
-                prev.removeClass('swap');
-                next.addClass('swap');
                 $('.project-preview').addClass('swap');
+                $('.project-name').removeClass('swap');
                 setTimeout(function(){
                     vm.mainProject = indexNext;
-                    prev.text(vm.dataProject[vm.mainProject].title);
-                    $('.project-desc').text(vm.dataProject[vm.mainProject].description);
+                    $(`.project-name.id-${ vm.mainProject }`).addClass('swap');            
                     setTimeout(function(){
-                        next.removeClass('swap');
-                        prev.addClass('swap');
                         $('.project-preview').removeClass('swap');
                     }, 1000);
                 }, 1000)
-                next.text(vm.dataProject[((indexNext+1) > (vm.dataProject.length-1)) ? 0 : indexNext+1].title);
             }
         }
     }
